@@ -1,16 +1,84 @@
-# React + Vite
+# Hello_Dev0ps — Site vitrine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Site vitrine one-page de **Anthony Exartier** (*Hello_Dev0ps*), développeur full-stack augmenté par l'IA.
 
-Currently, two official plugins are available:
+Interface cyberpunk / HUD, légère et sans backend pour l'instant.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Aperçu
 
-## React Compiler
+- **Accueil** — présentation et assistant d'intro
+- **À propos** — parcours et approche
+- **Expertises** — grille « Mon Arsenal » (cartes holographiques avec descriptions au survol)
+- **Projets** — carousel de réalisations
+- **Contact** — email, téléphone, LinkedIn, GitHub
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Stack
 
-## Expanding the ESLint configuration
+| Couche | Technologies |
+|--------|--------------|
+| Front | React 19, Vite 7, JavaScript |
+| UI | CSS custom, [react-icons](https://react-icons.github.io/react-icons/) |
+| Tooling | ESLint, pnpm |
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Prérequis
+
+- [Node.js](https://nodejs.org/) 18+
+- [pnpm](https://pnpm.io/)
+
+## Installation
+
+```bash
+git clone https://github.com/hellOdevOps-bit/site-vitrine-dev.git
+cd site-vitrine-dev
+pnpm install
+```
+
+## Scripts
+
+| Commande | Description |
+|----------|-------------|
+| `pnpm dev` | Serveur de développement (Vite) |
+| `pnpm build` | Build de production dans `dist/` |
+| `pnpm preview` | Prévisualisation du build |
+| `pnpm lint` | Vérification ESLint |
+
+## Structure du projet
+
+```
+src/
+├── components/     # UI réutilisable (Navbar, Arsenal, Carousel…)
+├── data/           # Données statiques (arsenal technique)
+├── pages/          # OnePage — toutes les sections
+├── assets/         # Images et logos
+├── App.jsx
+├── main.jsx
+└── index.css       # Styles globaux et thème cyberpunk
+```
+
+## Personnalisation
+
+- **Technologies & descriptions** → `src/data/arsenal.js`
+- **Projets** → constante `PROJECTS` dans `src/pages/OnePage.jsx`
+- **Couleurs & thème** → variables CSS dans `src/index.css` (`--accent-cyan`, `--bg-main`…)
+
+## Déploiement
+
+Build statique compatible avec tout hébergeur de fichiers statiques (Vercel, Netlify, GitHub Pages…).
+
+```bash
+pnpm build
+```
+
+Le dossier `dist/` contient le site prêt à déployer.
+
+## Auteur
+
+**Anthony Exartier** — Hello_Dev0ps
+
+- [LinkedIn](https://linkedin.com/in/hellodev0ps)
+- [GitHub](https://github.com/hellOdevOps-bit)
+- [hello.dev0ps81@gmail.com](mailto:hello.dev0ps81@gmail.com)
+
+## Licence
+
+Voir le fichier [LICENSE](LICENSE).
