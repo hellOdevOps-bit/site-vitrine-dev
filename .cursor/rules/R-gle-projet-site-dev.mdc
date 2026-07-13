@@ -1,0 +1,10 @@
+---
+alwaysApply: true
+---
+
+Ce projet est un site vitrine en React (Vite + JavaScript).
+Le code doit rester simple, lisible et modulaire.
+Pas de backend pour l’instant.
+Les animations doivent être sobres, isolées dans des composants dédiés.
+Priorité à la clarté, à la performance et à l’expérience utilisateur.
+Pas de sur-ingénierie.
