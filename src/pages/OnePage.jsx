@@ -4,8 +4,8 @@ import AssistantIntro from "../components/AssistantIntro"
 import ArsenalGrid from "../components/ArsenalGrid"
 import Carousel from "../components/Carousel"
 import background from "../assets/images/background-brain-cyberpunk.jpg"
-import aboutPhoto from "../assets/images/photo pro sbg.png"
-import heroLogo from "../assets/logos/Hello_Dev0ps! fond transparent.svg"
+import aboutPhoto from "../assets/images/anthony-profile.png"
+import heroLogo from "../assets/logos/hello-dev0ps-transparent.svg"
 
 const PROJECTS = [
   { title: "WedQR", description: "Application web interactive développée pour un mariage qui permet aux invités d'accéder facilement à différentes informations et fonctionnalités grâce à un simple QR Code présent sur les tables et supports de l'événement." },
@@ -58,7 +58,7 @@ function OnePage({ onSectionChange }) {
               className="hero-logo"
             />
             <p className="hero-subtitle">
-              Développeur full-stack — humain augmenté par l'IA
+              Applications web • Automatisation • Intelligence artificielle
             </p>
             <div className="hero-actions">
               <button
@@ -89,32 +89,30 @@ function OnePage({ onSectionChange }) {
           <p>
             Je m’appelle Anthony Exartier, développeur passionné par les systèmes,
             les machines et les interfaces intelligentes.
-            Dans une société où notre vie numérique est de plus en plus importante,
-            les dangers sont eux aussi de plus en plus nombreux et variés. 
-            C'est pourquoi j’intègre dès la conception une attention particulière à la sécurité et à la confidentialité des données.
           </p>
 
           <p>
             Après une dizaine d'années dans le domaine de la santé, j’ai choisi d’élargir mon activité au développement logiciel
             en me formant principalement en autodidacte. J’exerce aujourd’hui comme infirmier libéral
             tout en développant progressivement mon activité dans la tech.
-            Ma formation et mon expérience d'infirmier m'ont appris à mettre l'accent sur le travail bien fait et la qualité de service,
-            ces notions étant essentielles dans le domaine de la santé comme dans le développement logiciel.
           </p>
 
           <p>
             Aujourd’hui, je conçois des applications, des sites web et des outils sur mesure,
             en combinant logique humaine, automatisation et intégration de l'intelligence artificielle.
-            Parce que pour moi, les meilleurs tests sont ceux que l'on peut tester soi-même,
-            mes deux premiers projets ont été le site web de mon cabinet d'infirmier libéral
-            et l'application web interactive développée pour mon propre mariage,
+          </p>
+
+          <p>
+            Mes premiers projets sont nés de besoins que je connaissais directement :
+            le site web de mon cabinet d'infirmier libéral
+            et une application web interactive développée pour mon propre mariage,
             qui permet aux invités d'accéder facilement à différentes informations et fonctionnalités
             grâce à un simple QR code.
           </p>
 
           <p>
             Voulant garder un certain équilibre entre ma vie professionnelle et personnelle,
-            je ne cherche que des projets réalisables à distance pour le moment.
+            je privilégie actuellement les projets réalisables à distance.
           </p>
         </div>
       </section>
@@ -127,15 +125,34 @@ function OnePage({ onSectionChange }) {
         <div className="page-content arsenal-section">
           <h2 className="arsenal-heading">Mon Arsenal</h2>
           <p className="arsenal-intro">
-            Stack technique et outils IA — maîtrisés au fil des projets.
+            Une stack technique construite au fil de projets concrets, de formations en ligne
+            et d’un apprentissage autodidacte constant.
+          </p>
+
+          <p>
+            J’utilise aussi les LLMs comme outils pédagogiques pour comprendre les choix
+            techniques, comparer les solutions et progresser plus vite sans me contenter
+            de copier du code.
           </p>
           <ArsenalGrid />
         </div>
         <div className="page-content">
           <h2>Approche</h2>
           <p>
-            Comprendre le besoin réel, proposer une solution claire, livrer
-            quelque chose d'utilisable et durable.
+            Je commence par clarifier le besoin réel, identifier les contraintes et
+            choisir une solution proportionnée au projet. Mon objectif est de livrer
+            un outil utile, maintenable et compréhensible.
+          </p>
+
+          <p>
+            Dans une société où notre vie numérique est de plus en plus importante,
+            les dangers sont eux aussi de plus en plus nombreux et variés. 
+            C'est pourquoi j’intègre dès la conception une attention particulière à la sécurité et à la confidentialité des données.
+          </p>
+
+          <p>
+            Ma formation et mon expérience d'infirmier m'ont appris à mettre l'accent sur le travail bien fait et la qualité de service,
+            ces notions étant essentielles dans le domaine de la santé comme dans le développement logiciel.
           </p>
         </div>
       </section>

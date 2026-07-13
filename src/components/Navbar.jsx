@@ -1,5 +1,5 @@
 import { useRef, useLayoutEffect, useState } from "react"
-import logo from "../assets/logos/logo-initials-dark.png"
+import logo from "../assets/logos/logoHDblancsansbg.png"
 
 const NAV_ITEMS = [
   { label: "À propos", href: "#about" },

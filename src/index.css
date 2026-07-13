@@ -4,6 +4,8 @@
   --accent-cyan: #00f6ff;
   --accent-magenta: #d400ff;
   --header-height: 72px;
+  --font-display: "Silkscreen", monospace;
+  --font-body: "Rajdhani", sans-serif;
 }
 
 * {
@@ -15,7 +17,18 @@
 body {
   background-color: var(--bg-main);
   color: var(--text-main);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: var(--font-body);
+}
+
+.nav-links a,
+.page h1,
+.page-header h1,
+.page-content h2,
+.hero-subtitle,
+.arsenal-heading,
+.arsenal-card-title,
+.arsenal-item-name {
+  font-family: var(--font-display);
 }
 
 html,
@@ -81,7 +94,7 @@ html {
 }
 
 .logo {
-  height: 40px;
+  height: 50px;
   transition: transform 0.2s ease, filter 0.2s ease;
 }
 
@@ -443,7 +456,6 @@ section[id] {
 }
 
 .arsenal-heading {
-  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
   font-size: 1.1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -458,8 +470,14 @@ section[id] {
 
 .arsenal-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 1.5rem;
+}
+
+@media (max-width: 640px) {
+  .arsenal-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .arsenal-card {
@@ -538,7 +556,6 @@ section[id] {
 }
 
 .arsenal-card-title {
-  font-family: ui-monospace, "Cascadia Code", "Segoe UI Mono", monospace;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.25em;

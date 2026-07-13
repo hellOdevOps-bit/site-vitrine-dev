@@ -1,7 +1,7 @@
 export const ARSENAL_CATEGORIES = [
   {
     id: "frontend",
-    title: "FRONT-END",
+    title: "MODULE_FRONT-END.exe",
     items: [
       {
         id: "react",
@@ -32,7 +32,7 @@ export const ARSENAL_CATEGORIES = [
   },
   {
     id: "backend",
-    title: "BACK-END & CLOUD",
+    title: "MODULE_BACK-END.sys",
     items: [
       {
         id: "nodejs",
@@ -63,7 +63,7 @@ export const ARSENAL_CATEGORIES = [
   },
   {
     id: "ia",
-    title: "IA",
+    title: "MODULE_IA.dll",
     items: [
       {
         id: "openai",
@@ -89,7 +89,7 @@ export const ARSENAL_CATEGORIES = [
   },
   {
     id: "outils",
-    title: "OUTILS",
+    title: "MODULE_OUTILS.bin",
     items: [
       {
         id: "git",
