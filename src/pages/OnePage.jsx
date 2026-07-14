@@ -10,6 +10,8 @@ import aboutPhoto from "../assets/images/anthony-profile.png"
 import heroLogo from "../assets/logos/hello-dev0ps-transparent.svg"
 
 const SECTION_IDS = ["home", "about", "expertise", "projects", "contact"]
+const ASSISTANT_INTRO_ENABLED = false
+const CONTACT_PHONE_ENABLED = false
 
 function OnePage({ onSectionChange }) {
   const [showAssistant, setShowAssistant] = useState(false)
@@ -56,16 +58,18 @@ function OnePage({ onSectionChange }) {
             <p className="hero-subtitle">
               Le meilleur code est celui qui répond au vrai problème.
             </p>
-            <div className="hero-actions">
-              <button
-                className="btn-primary"
-                onClick={() => setShowAssistant(true)}
-              >
-                ▶ Présentation
-              </button>
-            </div>
+            {ASSISTANT_INTRO_ENABLED && (
+              <div className="hero-actions">
+                <button
+                  className="btn-primary"
+                  onClick={() => setShowAssistant(true)}
+                >
+                  ▶ Présentation
+                </button>
+              </div>
+            )}
           </div>
-          {showAssistant && (
+          {ASSISTANT_INTRO_ENABLED && showAssistant && (
             <AssistantIntro onClose={() => setShowAssistant(false)} />
           )}
         </div>
@@ -179,17 +183,19 @@ function OnePage({ onSectionChange }) {
         </div>
         <div className="page-content">
           <p className="contact-intro">
-            Une idée de projet, une question ? N'hésitez pas à me contacter.
+            Pour toute demande d'information complémentaire, une demande de devis, une question sur les tarifs exercés, ou tout autre idée de projet, n'hésitez pas à me contacter.
           </p>
           <ul className="contact-list">
             <li>
               <span className="contact-label">Email</span>
               <a href="mailto:hello.dev0ps81@gmail.com">hello.dev0ps81@gmail.com</a>
             </li>
-            <li>
-              <span className="contact-label">Téléphone</span>
-              <a href="tel:+33000000000">+33 0 00 00 00 00</a>
-            </li>
+            {CONTACT_PHONE_ENABLED && (
+              <li>
+                <span className="contact-label">Téléphone</span>
+                <a href="tel:+33000000000">+33 0 00 00 00 00</a>
+              </li>
+            )}
             <li>
               <span className="contact-label">
                 <TechIcon id="linkedin" className="contact-label-icon" />
