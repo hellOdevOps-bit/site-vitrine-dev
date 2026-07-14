@@ -3,15 +3,11 @@ import TechIcon from "../components/TechIcon"
 import AssistantIntro from "../components/AssistantIntro"
 import ArsenalGrid from "../components/ArsenalGrid"
 import Carousel from "../components/Carousel"
+import ProjectSlide from "../components/ProjectSlide"
+import { PROJECTS } from "../data/projects"
 import background from "../assets/images/background-brain-cyberpunk.jpg"
 import aboutPhoto from "../assets/images/anthony-profile.png"
 import heroLogo from "../assets/logos/hello-dev0ps-transparent.svg"
-
-const PROJECTS = [
-  { title: "WedQR", description: "Application web interactive développée pour un mariage qui permet aux invités d'accéder facilement à différentes informations et fonctionnalités grâce à un simple QR Code présent sur les tables et supports de l'événement." },
-  { title: "Site web Hello_Dev0ps", description: "Ce site — React, Vite, one-page." },
-  { title: "Site web de cabinet infirmier libéral", description: "Site web vitrine de mon cabinet d'infirmier libéral." },
-]
 
 const SECTION_IDS = ["home", "about", "expertise", "projects", "contact"]
 
@@ -46,7 +42,7 @@ function OnePage({ onSectionChange }) {
   return (
     <div
       className="one-page-bg"
-      style={{ backgroundImage: `url(${background})` }}
+      style={{ "--page-bg": `url(${background})` }}
     >
       {/* 1. Hero / Accueil */}
       <section id="home" className="home page section">
@@ -58,7 +54,7 @@ function OnePage({ onSectionChange }) {
               className="hero-logo"
             />
             <p className="hero-subtitle">
-              Applications web • Automatisation • Intelligence artificielle
+              Le meilleur code est celui qui répond au vrai problème.
             </p>
             <div className="hero-actions">
               <button
@@ -91,16 +87,22 @@ function OnePage({ onSectionChange }) {
             les machines et les interfaces intelligentes.
           </p>
 
+          <h3>DE LA SANTÉ À LA TECH</h3>
+
           <p>
             Après une dizaine d'années dans le domaine de la santé, j’ai choisi d’élargir mon activité au développement logiciel
             en me formant principalement en autodidacte. J’exerce aujourd’hui comme infirmier libéral
             tout en développant progressivement mon activité dans la tech.
           </p>
 
+          <h3>AUJOURD'HUI</h3>
+
           <p>
             Aujourd’hui, je conçois des applications, des sites web et des outils sur mesure,
             en combinant logique humaine, automatisation et intégration de l'intelligence artificielle.
           </p>
+
+          <h3>MA PHILOSOPHIE</h3>
 
           <p>
             Mes premiers projets sont nés de besoins que je connaissais directement :
@@ -165,12 +167,7 @@ function OnePage({ onSectionChange }) {
         <div className="page-content">
           <Carousel
             items={PROJECTS}
-            renderItem={(project) => (
-              <>
-                <h3>{project.title}</h3>
-                <p>{project.description}</p>
-              </>
-            )}
+            renderItem={(project) => <ProjectSlide project={project} />}
           />
         </div>
       </section>

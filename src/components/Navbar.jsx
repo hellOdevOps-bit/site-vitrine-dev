@@ -8,13 +8,16 @@ const NAV_ITEMS = [
   { label: "Contact", href: "#contact" },
 ]
 
-const HEADER_OFFSET = 72
+function getHeaderOffset() {
+  const header = document.querySelector(".app > header")
+  return header?.offsetHeight ?? 72
+}
 
 function scrollToSection(e, sectionId) {
   e.preventDefault()
   const el = document.getElementById(sectionId)
   if (!el) return
-  const y = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET
+  const y = el.getBoundingClientRect().top + window.scrollY - getHeaderOffset()
   window.scrollTo({ top: y, behavior: "smooth" })
 }
 
