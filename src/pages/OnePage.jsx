@@ -4,12 +4,13 @@ import AssistantIntro from "../components/AssistantIntro"
 import ArsenalGrid from "../components/ArsenalGrid"
 import Carousel from "../components/Carousel"
 import ProjectSlide from "../components/ProjectSlide"
+import ProductFeaturesGrid from "../components/ProductFeaturesGrid"
 import { PROJECTS } from "../data/projects"
 import background from "../assets/images/background-brain-cyberpunk.jpg"
 import aboutPhoto from "../assets/images/anthony-profile.png"
 import heroLogo from "../assets/logos/hello-dev0ps-transparent.svg"
 
-const SECTION_IDS = ["home", "about", "expertise", "projects", "contact"]
+const SECTION_IDS = ["home", "about", "services", "expertise", "projects", "contact"]
 const ASSISTANT_INTRO_ENABLED = false
 const CONTACT_PHONE_ENABLED = false
 
@@ -56,7 +57,7 @@ function OnePage({ onSectionChange }) {
               className="hero-logo"
             />
             <p className="hero-subtitle">
-              Le meilleur code est celui qui répond au vrai problème.
+              Vous avez les idées, j'ai les outils.
             </p>
             {ASSISTANT_INTRO_ENABLED && (
               <div className="hero-actions">
@@ -123,7 +124,42 @@ function OnePage({ onSectionChange }) {
         </div>
       </section>
 
-      {/* 3. Expertises */}
+      {/* 3. Services */}
+      <section id="services" className="page section">
+        <div className="page-header">
+          <h1>Services</h1>
+        </div>
+        <div className="page-content">
+          <h2 className="services-heading">Votre vie numérique, mon domaine</h2>
+          <p>
+            Votre site ne doit pas seulement être beau. Il doit être utile, rapide, accessible et vous aider à être vu.
+          </p>
+          <p>
+            Aujourd’hui, votre site web est souvent la première impression que les clients ont de votre commerce ou de votre entreprise.
+            Il doit donc renforcer votre visibilité, votre crédibilité et donner immédiatement confiance.
+          </p>
+          <p>
+            Je conçois des sites responsive, adaptés aux ordinateurs, tablettes et smartphones, avec une navigation claire et des temps de chargement optimisés.
+            Chaque site est également pensé pour être performant, accessible et correctement structuré pour le référencement naturel, 
+            afin d’être compris par les moteurs de recherche (SEO) et trouvé plus facilement par les personnes qui recherchent vos services.
+          </p>
+          <h2 className="services-heading">Suis-je fait pour vous ?</h2>
+          <p>
+            Que vous soyez une entreprise, un professionnel, une institution ou un particulier, votre besoin sera très différent.
+            J'interviens dans tous ces domaines, via la création, la refonte, la maintenance, l'optimisation, 
+            la transformation ou la mise en production de votre outil numérique sur mesure ou déjà existant.
+          </p>
+          <h2 className="services-heading">Fonctionnalités par type de produit</h2>
+          <p>
+            Chaque type de produit n’implique pas les mêmes briques techniques.
+            Voici une vue d’ensemble des fonctionnalités typiques : ce qui est généralement indispensable,
+            et ce qui est fréquent ou utile selon le projet.
+          </p>
+          <ProductFeaturesGrid />
+        </div>
+      </section>
+
+      {/* 4. Expertises */}
       <section id="expertise" className="page section">
         <div className="page-header">
           <h1>Expertises</h1>
@@ -163,7 +199,7 @@ function OnePage({ onSectionChange }) {
         </div>
       </section>
 
-      {/* 4. Projets */}
+      {/* 5. Projets */}
       <section id="projects" className="page section">
         <div className="page-header">
           <h1>Projets</h1>
@@ -176,7 +212,7 @@ function OnePage({ onSectionChange }) {
         </div>
       </section>
 
-      {/* 5. Contact */}
+      {/* 6. Contact */}
       <section id="contact" className="page section">
         <div className="page-header">
           <h1>Contact</h1>

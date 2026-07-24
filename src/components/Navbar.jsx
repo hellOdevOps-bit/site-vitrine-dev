@@ -3,6 +3,7 @@ import logo from "../assets/logos/logoHDblancsansbg.png"
 
 const NAV_ITEMS = [
   { label: "À propos", href: "#about" },
+  { label: "Services", href: "#services" },
   { label: "Expertises", href: "#expertise" },
   { label: "Projets", href: "#projects" },
   { label: "Contact", href: "#contact" },
