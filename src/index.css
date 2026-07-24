@@ -342,9 +342,31 @@ section[id] {
   gap: 1.5rem;
 }
 
+.product-features-carousel .carousel-slide {
+  padding: 0.25rem 0.5rem;
+  border: none;
+  background: transparent;
+}
+
+.product-features-carousel .carousel-btn-prev {
+  left: -8px;
+}
+
+.product-features-carousel .carousel-btn-next {
+  right: -8px;
+}
+
 @media (max-width: 640px) {
   .product-features-grid {
     grid-template-columns: 1fr;
+  }
+
+  .product-features-carousel .carousel-btn-prev {
+    left: 0;
+  }
+
+  .product-features-carousel .carousel-btn-next {
+    right: 0;
   }
 }
 
@@ -598,6 +620,33 @@ section[id] {
 
 .project-section-list li:last-child {
   margin-bottom: 0;
+}
+
+.project-screenshots {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 246, 255, 0.15);
+}
+
+.project-screenshots-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.project-screenshot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid rgba(0, 246, 255, 0.25);
+  border-radius: 4px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 480px) {
+  .project-screenshots-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .carousel-btn {

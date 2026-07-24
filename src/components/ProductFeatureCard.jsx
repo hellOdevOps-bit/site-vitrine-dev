@@ -25,7 +25,7 @@ function FeatureGroup({ level, items }) {
   )
 }
 
-function ProductFeatureCard({ type, description, features }) {
+function ProductFeatureCard({ type, description, features = [] }) {
   const core = features.filter((f) => f.level === "core").map((f) => f.name)
   const optional = features.filter((f) => f.level === "optional").map((f) => f.name)
 

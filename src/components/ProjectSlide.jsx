@@ -34,6 +34,22 @@ function ProjectSlide({ project }) {
         {project.sections.map((section) => (
           <ProjectSection key={section.heading} {...section} />
         ))}
+        {project.screenshots?.length > 0 && (
+          <div className="project-screenshots">
+            <h4 className="project-section-heading">Captures d'écran</h4>
+            <div className="project-screenshots-grid">
+              {project.screenshots.map(({ src, alt }) => (
+                <img
+                  key={alt}
+                  src={src}
+                  alt={alt}
+                  className="project-screenshot"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </article>
     )
   }

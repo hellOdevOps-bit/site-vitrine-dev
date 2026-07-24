@@ -1,8 +1,20 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
-function Carousel({ items, renderItem, className = "" }) {
+function Carousel({
+  items,
+  renderItem,
+  className = "",
+  labels = {},
+}) {
   const [index, setIndex] = useState(0)
   const total = items.length
+  const prevLabel = labels.prev ?? "Élément précédent"
+  const nextLabel = labels.next ?? "Élément suivant"
+  const pageLabel = labels.page ?? ((i) => `Élément ${i + 1}`)
+
+  useEffect(() => {
+    setIndex((current) => (total === 0 ? 0 : Math.min(current, total - 1)))
+  }, [total])
 
   if (total === 0) return null
 
@@ -30,7 +42,7 @@ function Carousel({ items, renderItem, className = "" }) {
             type="button"
             className="carousel-btn carousel-btn-prev"
             onClick={goPrev}
-            aria-label="Projet précédent"
+            aria-label={prevLabel}
           >
             ‹
           </button>
@@ -38,7 +50,7 @@ function Carousel({ items, renderItem, className = "" }) {
             type="button"
             className="carousel-btn carousel-btn-next"
             onClick={goNext}
-            aria-label="Projet suivant"
+            aria-label={nextLabel}
           >
             ›
           </button>
@@ -48,7 +60,7 @@ function Carousel({ items, renderItem, className = "" }) {
                 key={i}
                 type="button"
                 className="carousel-dot"
-                aria-label={`Projet ${i + 1}`}
+                aria-label={pageLabel(i)}
                 aria-current={i === index}
                 onClick={() => setIndex(i)}
               />
